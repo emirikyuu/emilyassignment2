@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>
+            Icon Template Square
+        </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+        <style>
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="row">
+            <div class="image-container"><img id="target" src="img/target.png" onmouseover="this.src='img/cir.png';" onmouseout="this.src='img/target.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="book" src="img/book.png" onmouseover="this.src='img/cir.png';" onmouseout="this.src='img/book.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="write" src="img/write.png" onmouseover="this.src='img/cir.png';" onmouseout="this.src='img/write.png';" height="200" width="200"/></div>
+        </div>
+
+        <div class="row">
+           <div class="image-container"><img id="bulb" src="img/bulb.png" onmouseover="this.src='img/cir.png';" onmouseout="this.src='img/bulb.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="heart" src="img/heart.png" onmouseover="this.src='img/cir.png';" onmouseout="this.src='img/heart.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="sound" src="img/sound.png" onmouseover="this.src='img/cir.png';" onmouseout="this.src='img/sound.png';" height="200" width="200"/></div>
+        </div>
+
+        <div class="row">
+             <div class="image-container"><img id="words" src="img/words.png" onmouseover="this.src='img/cir.png';" onmouseout="this.src='img/words.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="timer" src="img/timer.png" onmouseover="this.src='img/cir.png';" onmouseout="this.src='img/timer.png';" height="200" width="200"/></div>
+            <div class="image-container"><img id="speak" src="img/speak.png" onmouseover="this.src='img/cir.png';" onmouseout="this.src='img/speak.png';" height="200" width="200"/></div>
+        </div>
+
+         <script>
+            var sound1 = new buzz.sound("sound/arrow.mp3");
+            var sound2 = new buzz.sound("sound/magnify.mp3");
+            var sound3 = new buzz.sound("sound/writing.mp3");
+
+            window.onload = function() {
+                document.getElementById('target').addEventListener('mouseover', function () {sound1.play();});
+                document.getElementById('book').addEventListener('mouseover', function () {sound2.play();});
+                document.getElementById('write').addEventListener('mouseover', function () {sound3.play();});
+                document.getElementById('').addEventListener('mouseover', function () {sound4.play();});
+            };
+        </script>
+        
+    </body>
+    
+</html>
